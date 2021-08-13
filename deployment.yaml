@@ -1,10 +1,12 @@
 apiVersion: v1
-kind: Deployment
-metadata:
-  name: student3-adinusa
-spec:
-  replicas: 3
-  template:
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+   name: student3-adinusa
+  spec:
+    replicas: 3
+    template:
     metadata:
       labels:
         app: nginx
