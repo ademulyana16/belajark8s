@@ -1,9 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: student3-adinusa
+  name: nginx-deployment
 spec:
-  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
